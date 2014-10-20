@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd"
+	 xml:lang="en" >
+	 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Convert me!</title>
+<style type="text/css" media="screen">
+	/* simulate state where JavaScript is disabled (images just don't show up): */
+	img {
+		display:none;
+	}
+</style>
+<script type="text/javascript">
+	//<![CDATA[
+function convert()
+{
+	//get the images on the page (do this for links and other embedded stuff, too)
+	images = window.document.getElementsByTagName("img");
+	for(i = images.length-1; i>=0; i--) {
+		var imj = new Image();
+		imj.src = "content/content.png";
+		images[i].parentNode.replaceChild(imj,images[i]);
+		// set the images to be visible again, but this time, it's our replacement image.
+		imj.style.display = "inline";
+	}
+}
+//]]>
+</script>
+</head>
+
+<body>
+
+
+<table width="600" border="0">
+ <tbody>
+  <tr>
+	<td align="center"><img height="100" alt="Schadenfreude" src="icon.png" width="100" /></td>
+	<td align="center"><img height="100" alt="Erstaunen" src="icon.png" width="100" /></td>
+	<td align="center"><img height="100" alt="Skepsis" src="icon.png" width="100" /></td>
+	<td align="center"><img height="100" alt="Betretenheit" src="icon.png" width="100" /></td>
+  </tr>
+  <tr>
+	<td valign="top" align="center">ist die schönste Freude, kann aber Feinde 
+	schaffen</td>
+	<td valign="top" align="center">gebar die Philosophie und wird von 
+	Rechthabern immer wieder unterschätzt</td>
+	<td valign="top" align="center">ist bisweilen angebracht, sollte aber nicht 
+	das weitere Dazulernen behindern</td>
+	<td valign="top" align="center">ist sehr unangenehm, währt aber nicht ewig</td>
+  </tr>
+  </tbody>
+</table>
+		<p><input type="button" value="Convert" onclick="convert()" /></p>
+</body>
+
+</html>

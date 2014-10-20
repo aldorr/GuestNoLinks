@@ -1,0 +1,3 @@
+.Message img, .Message a, .Message iframe, .Message embed, .Message object {
+	display: none;
+}
